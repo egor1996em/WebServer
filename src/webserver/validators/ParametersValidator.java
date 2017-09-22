@@ -91,7 +91,7 @@ public class ParametersValidator {
     
     public static String getContentDirectoryPathWithValidate(String contentDirectoryPathTemplate, BufferedReader reader) throws IOException
     {
-        String ContentDirectoryPath = null;
+        String ContentDirectoryPath = contentDirectoryPathTemplate;
         
         ContentDirectoryPathValidator validator = ContentDirectoryPathValidator.getInstance();
         

@@ -21,17 +21,8 @@ public class ContentDirectoryPathValidator {
     
     public boolean isValid(String ContentDirectoryPath)
     {
-        //Разделим путь слэшами
-        String[] directories = ContentDirectoryPath.split("/");
-        //Проверим каждый блок. Если только цифры и буквы, то путь подходит
-        for(String directoryName : directories)
-        {
-           if (directoryName.matches("^[a-zA-Z0-9]+$") == false)
-           {
-               return false;
-           }
-        } 
-        return true;
+        //Проверим текст на наличие символов
+        return ContentDirectoryPath.matches("^[a-zA-Z0-9/]+$");
     }
     
 }
